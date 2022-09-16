@@ -323,10 +323,7 @@ class VimwikiTask(object):
 
     def __str__(self):
         due_str = ' ' + (
-                self['due'].strftime(regexp.DATETIME_FORMAT)
-                  if not util.is_midnight(self['due']) else
-                self['due'].strftime(regexp.DATE_FORMAT)
-                ) if self['due'] else ''
+                self['due'].strftime(regexp.DATETIME_FORMAT)                ) if self['due'] else ''
 
         return ''.join([
             self['indent'],
